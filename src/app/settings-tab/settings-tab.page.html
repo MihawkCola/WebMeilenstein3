@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Einstellungen</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Anzahl Bücher ist: {{taskService.getTasks().length}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Zurücksetzten der Aufgaben</ion-label>
+      <ion-button color="danger" (click)="taskService.deleteAll()">RESET</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

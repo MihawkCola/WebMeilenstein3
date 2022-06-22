@@ -1,0 +1,28 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-title>addTask</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()">
+        <ion-icon name="close-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Titel</ion-label>
+      <ion-input [(ngModel)]="titel"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Beschreibung</ion-label>
+      <ion-input [(ngModel)]="beschreibung"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Dauer(Min)</ion-label>
+      <ion-input type="number" [(ngModel)]="dauer" ></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button color="success" expand="block" (click)="addTask()">Speichern</ion-button>
+</ion-content>
